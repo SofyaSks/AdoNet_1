@@ -17,8 +17,8 @@ while (reader.Read())
     int id = reader.GetInt32(0);
     string title = reader.GetString(1);
     int? rating = reader.IsDBNull(2) ? null : reader.GetInt32(2);
-    int? weight = reader.IsDBNull(3) ? null : reader.GetInt32(3);
-    int? duration = reader.IsDBNull(4) ? null : reader.GetInt32(4);
+    int weight = reader.GetInt32(3);
+    int duration = reader.GetInt32(4);
 
     Console.WriteLine($"{id,5} {title,-20} {rating,5} {weight,5} {duration,5} ");
 }
